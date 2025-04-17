@@ -28,6 +28,7 @@ public class User {
 
     private LocalDateTime registrationDate;
 
+    @ToString.Exclude
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_type_id")
     private UserType userType;
